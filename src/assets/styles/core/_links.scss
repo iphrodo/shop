@@ -1,0 +1,17 @@
+@mixin link-primary{
+	color: $color-text-black;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@mixin link-secondary{
+	color: $color-text-grey;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
