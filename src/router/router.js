@@ -30,7 +30,7 @@ let router = new Router({
 		},
 		{
 			path: '/',
-			alias: '/home',
+			alias: '/shop',
 			name: 'home',
 			component: vHome
 		},
