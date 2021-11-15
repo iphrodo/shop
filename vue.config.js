@@ -9,5 +9,5 @@ module.exports = {
 };
 
 module.exports = {
-	publicPath: '/vue-shop/'
+	publicPath: '/shop/'
 }
