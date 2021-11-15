@@ -4,7 +4,7 @@ export default {
 	GET_PRODUCTS_FROM_API({commit}) {
 		return axios({
 			method: 'get',
-			url: 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=smashbox'
+			url: 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=smashbox'
 		})
 		.then((products) => {
 			commit('SET_PRODUCTS_TO_STATE', products.data);
