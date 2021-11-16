@@ -1,11 +1,13 @@
 <template>
-	<div class="b-catalog-item">
-		<img :src="product_data.image_link" alt="">
-		<router-link :to="{name: 'product', params: {product_data: product_data}}">
-			<span>{{ product_data.name }}</span>
-		</router-link>
-		<p>price: $ {{ product_data.price }}</p>
-		<button @click="addToCart">Add to cart</button>
+	<div class="b-catalog_item">
+		<div class="b-catalog_item-image"><img :src="product_data.image_link" alt=""></div>
+		<div class="b-catalog_item-body">
+			<router-link :to="{name: 'product', params: {product_data: product_data}}" class="b-catalog_item-link link-secondary">
+				<span>{{ product_data.name }}</span>
+			</router-link>
+			<p>price: ${{ product_data.price }}</p>
+			<button @click="addToCart" class="b-catalog_item-btn btn btn-primary">Add to cart</button>
+		</div>
 	</div>
 </template>
 
@@ -42,16 +44,23 @@
 	}
 </script>
 
-<style module>
-	.b-catalog-item {
-		box-sizing: border-box;
-		flex-basis: 32%;
-		box-shadow: 0 0 0 1px #ccc;
-		padding: 20px;
+<style lang="scss" scoped>
+	.b-catalog_item {
+		box-shadow: 0 0 0 1px #eee;
 		margin-bottom: 20px;
-	}
 
-	img {
-		max-width: 50%;
+		&-body {
+			padding: 20px;
+		}
+
+		&-btn {
+			width: 100%;
+		}
+
+		&-link {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 </style>

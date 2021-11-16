@@ -1,10 +1,13 @@
 <template>
-	<div class="b-product-item">
-		<img :src="product_data.image" alt="">
-		<div class="b-cart-item-info">
-			<p>{{ product_data.title }}</p>
-			<p>{{ product_data.price }}</p>
-			<p>{{ product_data.description }}</p>
+	<div class="container">
+		<div class="b-product-item">
+			<img :src="product_data.image" alt="">
+			<div class="b-cart-item-info">
+				<p><img :src="product_data.image_link" class="b-home_tile-img" alt=""></p>
+				<p>{{ product_data.name }}</p>
+				<p>{{ product_data.price }}</p>
+				<p>{{ product_data.description }}</p>
+			</div>
 		</div>
 	</div>
 </template>

@@ -2,13 +2,14 @@
 	<div class="v-catalog b-catalog container">
 		<h1 class="b-page_title">Catalog</h1>
 		<v-loader v-if="loading"></v-loader>
-		<v-catalog-item 
-			v-else
+		<div class="b-catalog_container" v-else>
+			<v-catalog-item 
 			v-for="product in PRODUCTS"
 			:key="product.article"
 			:product_data="product"
 			@addToCart="addToCart"
 		/>
+		</div>
 	</div>
 </template>
 
@@ -55,11 +56,21 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.b-catalog{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		&_container {
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	img {
+		max-width: 100%;
 	}
 
 	h1 {

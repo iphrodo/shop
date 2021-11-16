@@ -54,7 +54,7 @@
 	}
 </script>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 	.v-cart-item {
 		display: flex;
 		justify-content: space-between;
