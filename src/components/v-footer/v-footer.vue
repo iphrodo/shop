@@ -2,7 +2,7 @@
     <div class="v-footer b-footer">
         <div class="b-footer-container container">
             <v-main-navigation></v-main-navigation>
-            Copyright 2021 
+            Copyright © 2021. All rights reserved.
         </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
 	<div class="v-cart b-cart container">
 		<h1 class="b-page_title">Cart</h1>
-		<router-link :to="{name: 'catalog'}">
+		<router-link :to="{name: 'catalog'}" class="b-cart-back">
 			<div class="v-catalog__link_to_cart">Back to catalog</div>
 		</router-link>
 		<p v-if="!cart_data.length">No products...</p>
@@ -12,7 +12,7 @@
 			@deleteFromCart="deleteFromCart(index)"
 		/>
 		<div class="v-cart_total">
-			<p>Total: ${{ cartTotalCost }}</p>
+			<p><b>Total: ${{ cartTotalCost }}</b></p>
 		</div>
 	</div>
 </template>
@@ -70,6 +70,17 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
+	.b-cart {
+		&-back {
+			color: #333333;
+			font-weight: 500;
+			margin-bottom: 10px;
+			display: block;
 
+			&:hover {
+				color: #00c8c8;
+			}
+		}
+	}
 </style>
