@@ -32,6 +32,11 @@
 	.b-main_navigation {
 		&-list {
 			display: flex;
+
+			.b-footer & {
+				margin: 0;
+				padding: 0;
+			}
 		}
 
 		&-item {
