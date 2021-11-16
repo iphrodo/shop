@@ -9,7 +9,7 @@
 				<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
 			</svg>
 		</router-link>
-		<ul class="b-mini_cart-list">
+		<ul class="b-mini_cart-list" v-if="CART.length > 0">
 			<li v-for="item in CART" :key="item.id" class="b-mini_cart-item">
 				<div class="b-mini_cart-image"><img :src="item.image_link" alt=""></div>
 				<div class="b-mini_cart-body">
